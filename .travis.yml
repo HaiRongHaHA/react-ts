@@ -1,0 +1,16 @@
+language: node_js
+node_js: 
+    - '11'
+install:
+  - npm install
+after_script:
+  - cd ./dist
+  - git init
+  - git config user.name "HaiRongHaHA"
+  - git config user.email "whr9743@163.com"
+  - git add -A
+  - git commit -m "Update documents"
+  - git push --force  "https://db9fc322f86246cb13138bfbe6403b6f8a5bbc14@https://github.com/HaiRongHaHA/react-ts.git" "master:gh-pages"
+branches:
+  only:
+    - master
